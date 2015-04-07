@@ -1,8 +1,7 @@
 class SumOfMultiples
 
-  def initialize (default = 5, *multiple_divisor)
-    p default
-    p multiple_divisor
+  def initialize (first_multiple = 3, second_multiple = 5, *additional_multiple)
+    
   end
 
   def self.to(x)
@@ -10,4 +9,4 @@ class SumOfMultiples
   end
 end
 
-SumOfMultiples.new(5, 4, 9)
+SumOfMultiples.new(9)
