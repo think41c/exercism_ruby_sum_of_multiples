@@ -1,7 +1,13 @@
 class SumOfMultiples
 
+  attr_accessor :multiple_upto
+
   def initialize (first_multiple = 3, second_multiple = 5, *additional_multiple)
 
+  end
+
+  def multiple_upto
+    @multiple_upto
   end
 
   def self.to(multiple_upto)
@@ -10,22 +16,12 @@ class SumOfMultiples
   end
 
   def self.find_the_multiples
-    # Step 1: 
-    # Start X at 1, divide it by 3, if it's 0, then it's a multiple and save X to "found_multiple"
-    # Repeat the same process for dividing by 5. 
-
     found_multiple = []
     
     (1...@multiple_upto).each do |x|
       found_multiple << x if x % 3 == 0 || x % 5 == 0  
       end
     puts found_multiple
-
-    # Step 1.5:
-    # Use a range of iterations to make sure X is never equal to or greater than multiple_upto. An exclusive range -> (...)
-
-    # Step 2: 
-    # Increment X by 1. Repeat Step 1. 
 
     # Step 3: 
     # Take the resulting array of multiples and send them to sum_the_multiples
@@ -37,7 +33,6 @@ class SumOfMultiples
     0
     # "summed_multiples" is returned
   end
-
 end
-#
- SumOfMultiples.to(10)
+
+SumOfMultiples.to(10)
