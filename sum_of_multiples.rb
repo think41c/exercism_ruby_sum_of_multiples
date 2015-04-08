@@ -3,14 +3,9 @@ class SumOfMultiples
   attr_accessor :multiple_upto, :first_multiple
 
   def initialize (first_multiple = 3, second_multiple = 5, *additional_multiple)
-    @first_multiple = first_multiple
+    @first_multiple  = first_multiple
     @second_multiple = second_multiple
-    # puts "do i run?"
   end
-
-  # def multiple_upto
-  #   @multiple_upto
-  # end
 
   def self.to(multiple_upto)
     @multiple_upto = multiple_upto
@@ -19,10 +14,14 @@ class SumOfMultiples
 
   def self.find_the_multiples
     found_multiple = []
-    # puts @first_multiple
-    (1...@multiple_upto).each do |x|
-      found_multiple << x if x % 3 == 0 || x % 5 == 0  
+    divisors = [3,5]
+    (0..divisors.length-1).each do |divisor_num|
+      (1...@multiple_upto).each do |x|
+        if x % divisors[divisor_num] == 0 
+          found_multiple << x 
+        end
       end
+    end
     found_multiple
   end
 
@@ -31,5 +30,5 @@ class SumOfMultiples
   end
 end
 
-# SumOfMultiples.to(10)
+p SumOfMultiples.to(10)
 # SumOfMultiples.new(7, 13, 17).to(20)
