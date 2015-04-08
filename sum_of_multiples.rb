@@ -21,17 +21,11 @@ class SumOfMultiples
     (1...@multiple_upto).each do |x|
       found_multiple << x if x % 3 == 0 || x % 5 == 0  
       end
-    puts found_multiple
-
-    # Step 3: 
-    # Take the resulting array of multiples and send them to sum_the_multiples
-
+    found_multiple
   end
 
   def self.sum_the_multiples(found_multiple)
-    # Iterate through all the multiples adding them together and returning them to the calling method.
-    0
-    # "summed_multiples" is returned
+    found_multiple.reduce(0,:+)
   end
 end
 
