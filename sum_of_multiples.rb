@@ -5,12 +5,12 @@ class SumOfMultiples
   def initialize (first_multiple = 3, second_multiple = 5, *additional_multiple)
     @first_multiple = first_multiple
     @second_multiple = second_multiple
-    puts "do i run?"
+    # puts "do i run?"
   end
 
-  def multiple_upto
-    @multiple_upto
-  end
+  # def multiple_upto
+  #   @multiple_upto
+  # end
 
   def self.to(multiple_upto)
     @multiple_upto = multiple_upto
