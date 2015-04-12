@@ -1,4 +1,5 @@
 class SumOfMultiples
+
   class << self
     def to(number)
       new(3, 5).to(number)
@@ -15,7 +16,7 @@ class SumOfMultiples
       .reduce(0, :+)
   end
 
-  private def multiple?(number)
+  def multiple?(number)
     @multiples.any? { |multiple| number % multiple == 0 }
   end
 end
