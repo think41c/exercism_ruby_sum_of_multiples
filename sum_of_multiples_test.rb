@@ -20,12 +20,10 @@ class SumTest < Minitest::Test
   end
 
   def test_configurable_7_13_17_to_20
-    skip
     assert_equal 51, SumOfMultiples.new(7, 13, 17).to(20)
   end
 
   def test_configurable_43_47_to_10000
-    skip
     assert_equal 2_203_160, SumOfMultiples.new(43, 47).to(10_000)
   end
 end
