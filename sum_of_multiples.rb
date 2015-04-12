@@ -6,18 +6,16 @@ class SumOfMultiples
     end
   end
 
-  def initialize(*multiples)
-    @multiples = multiples
+  def initialize(*divisor)
+    @divisor = divisor
   end
 
   def to(number)
-    (1...number)
-      .select { |n| multiple?(n) }
-      .reduce(0, :+)
+    numb = (1...number).select { |n| multiple?(n) }
+    numb.reduce(0, :+)
   end
 
   def multiple?(number)
-    @multiples.any? { |multiple| number % multiple == 0 }
+    @divisor.any? { |multiple| number % multiple == 0 }
   end
 end
-
