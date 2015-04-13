@@ -1,9 +1,7 @@
 class SumOfMultiples
 
-  class << self
-    def to(number)
-      new(3, 5).to(number)
-    end
+  def self.to(number)
+    new(3, 5).to(number)
   end
 
   def initialize(*divisor)
